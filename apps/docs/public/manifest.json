@@ -1,0 +1,32 @@
+{
+    "theme_color": "#443987",
+    "background_color": "#FFFFFA",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Agustin",
+    "short_name": "prueba-agustin",
+    "description": "prueba de app PWA",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
