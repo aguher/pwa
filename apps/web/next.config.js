@@ -1,8 +1,6 @@
 const { DOCS_URL } = process.env;
 
 module.exports = {
-  reactStrictMode: true,
-  transpilePackages: ["ui"],
   async rewrites() {
     return [
       /**
