@@ -4,11 +4,7 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": [
-      "ES2015",
-      "DOM",
-      "WebWorker"
-    ],
+    "lib": ["ES2015", "DOM"],
     "module": "ESNext",
     "target": "es6"
   }

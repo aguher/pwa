@@ -12,7 +12,7 @@ const activateEvent = () => {
 };
 activateEvent();
 
-const cacheName = "v1";
+const cacheName = "v2";
 
 const cacheClone = async (e) => {
   const res = await fetch(e.request);
@@ -30,6 +30,10 @@ const fetchEvent = () => {
         .catch(() => caches.match(e.request))
         .then((res) => res)
     );
+  });
+
+  self.addEventListener("activate", (event) => {
+    console.log("activate");
   });
 };
 

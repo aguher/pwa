@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Navbar from "ui/components/Navbar";
 
 const APP_NAME = "next-pwa example";
 const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
@@ -13,8 +14,10 @@ export default function RootLayout({
   useEffect(() => {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
-        .register("service-worker.js")
-        .then((registration) => console.log("scope is: ", registration.scope));
+        .register("/docs/service-worker.js")
+        .then((registration) => {
+          console.log("scope is: ", registration.scope);
+        });
     }
   }, []);
   return (
@@ -36,9 +39,10 @@ export default function RootLayout({
           sizes="180x180"
           href="/icons/apple-touch-icon.png"
         />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="manifest" href="/docs/manifest.json" />
+        <link rel="shortcut icon" href="/docs/favicon.ico" />
       </head>
+      <Navbar isDocsApp />
       <body>{children}</body>
     </html>
   );

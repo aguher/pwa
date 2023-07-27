@@ -3,6 +3,7 @@ const withPWA = require("@imbios/next-pwa")({
 });
 
 module.exports = withPWA({
+  basePath: "/docs",
   reactStrictMode: true,
   transpilePackages: ["ui"],
 });
