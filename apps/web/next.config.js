@@ -1,6 +1,8 @@
 const { DOCS_URL } = process.env;
 
 module.exports = {
+  reactStrictMode: true,
+  transpilePackages: ["shadcn"],
   async rewrites() {
     return [
       /**

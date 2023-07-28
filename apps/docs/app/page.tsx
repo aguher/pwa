@@ -1,11 +1,11 @@
 import Image from "next/image";
-import styles from "../page.module.css";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.center}>
-        <h1>This is About page from MAIN app</h1>
+        <h1>This is Home page from DOCS app</h1>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -15,7 +15,6 @@ export default function Home() {
           priority
         />
       </div>
-
       <div className={styles.description}>
         <div>
           <a

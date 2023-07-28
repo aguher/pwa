@@ -1,31 +1,54 @@
 import type { FC } from "react";
 import { Link, A } from "@vercel/examples-ui";
+import styles from "./navbar.module.css";
 
 const Navbar: FC<{ isDocsApp?: boolean }> = ({ isDocsApp }) =>
   isDocsApp ? (
-    <ul className="inline-flex mb-4">
-      <li>
-        <A href="/">Home (Multi Zones)</A>
-      </li>
-      <li className="ml-4">
-        <Link href="/">Docs Home page</Link>
-      </li>
-      <li className="ml-4">
-        <Link href="/about">Docs About page</Link>
-      </li>
-    </ul>
+    <div className={styles.grid}>
+      <A href="/" className={styles.card}>
+        <h2>
+          Home app<span>-&gt;</span> Multizone
+        </h2>
+        <p>Find in-depth information about Next.js features and API.</p>
+      </A>
+
+      <Link href="/" className={styles.card}>
+        <h2>
+          Docs app<span>-&gt;</span> Homepage
+        </h2>
+        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+      </Link>
+
+      <Link href="/about" className={styles.card}>
+        <h2>
+          Docs app<span>-&gt;</span> About
+        </h2>
+        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+      </Link>
+    </div>
   ) : (
-    <ul className="inline-flex mb-4">
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li className="ml-4">
-        <Link href="/about">About</Link>
-      </li>
-      <li className="ml-4">
-        <A href="/docs">Docs (Multi Zones)</A>
-      </li>
-    </ul>
+    <div className={styles.grid}>
+      <Link href="/" className={styles.card}>
+        <h2>
+          Home app<span>-&gt;</span> Homepage
+        </h2>
+        <p>Find in-depth information about Next.js features and API.</p>
+      </Link>
+
+      <Link href="/about" className={styles.card}>
+        <h2>
+          Home app<span>-&gt;</span> About
+        </h2>
+        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+      </Link>
+
+      <A href="/docs" className={styles.card}>
+        <h2>
+          Docs app<span>-&gt;</span> Homepage docs
+        </h2>
+        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+      </A>
+    </div>
   );
 
 export default Navbar;
