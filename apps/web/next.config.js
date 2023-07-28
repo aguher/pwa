@@ -1,6 +1,10 @@
 const { DOCS_URL } = process.env;
 
-module.exports = {
+const withPWA = require("@imbios/next-pwa")({
+  dest: "public",
+});
+
+module.exports = withPWA({
   reactStrictMode: true,
   transpilePackages: ["shadcn"],
   async rewrites() {
@@ -22,4 +26,4 @@ module.exports = {
       },
     ];
   },
-};
+});
