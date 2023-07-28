@@ -7,6 +7,10 @@ module.exports = {
        * Rewrites for Multi Zones
        */
       {
+        source: "/:path*",
+        destination: `/:path*`,
+      },
+      {
         source: "/docs",
         destination: `${DOCS_URL}/docs`,
       },
