@@ -1,19 +1,25 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import "shadcn/styles/globals.css";
+import { Button, Skeleton } from "shadcn";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <h1>This is Home page from DOCS app</h1>
+      <Image
+        className={styles.logo}
+        src="/next.svg"
+        alt="Next.js Logo"
+        width={180}
+        height={37}
+        priority
+      />
       <div className={styles.center}>
-        <h1>This is Home page from DOCS app</h1>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <Button asChild variant="destructive">
+          <Link href="/about"> Go to ABOUT page for DOCS app</Link>
+        </Button>
       </div>
       <div className={styles.description}>
         <div>

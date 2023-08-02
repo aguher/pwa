@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 
-export default function About() {
+export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.center}>
@@ -15,6 +15,7 @@ export default function About() {
           priority
         />
       </div>
+
       <div className={styles.description}>
         <div>
           <a
