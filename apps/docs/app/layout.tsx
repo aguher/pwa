@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "ui/components/Navbar";
+import { Navbar } from "shadcn";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({

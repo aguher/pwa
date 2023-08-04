@@ -1,52 +1,41 @@
 import type { FC } from "react";
 import { Link, A } from "@vercel/examples-ui";
-import styles from "./navbar.module.css";
+import "shadcn/styles/globals.css";
 
+import styles from "./navbar.module.css";
+import { Mail } from "lucide-react";
+
+import { Button } from "shadcn";
 const Navbar: FC<{ isDocsApp?: boolean }> = ({ isDocsApp }) =>
   isDocsApp ? (
     <div className={styles.grid}>
       <A href="/" className={styles.card}>
-        <h2>
-          Home app<span>-&gt;</span> Multizone
-        </h2>
-        <p>Find in-depth information about Next.js features and API.</p>
+        <Button variant="premium">
+          <Mail className="mr-2 h-4 w-4" />
+          <p className="italic">Home Main App</p>
+        </Button>
       </A>
 
       <Link href="/" className={styles.card}>
-        <h2>
-          Docs app<span>-&gt;</span> Homepage
-        </h2>
-        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+        <Button variant="destructive">Homepage Doc App</Button>
       </Link>
 
       <Link href="/about" className={styles.card}>
-        <h2>
-          Docs app<span>-&gt;</span> About
-        </h2>
-        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+        <Button variant="destructive">About Doc App</Button>
       </Link>
     </div>
   ) : (
     <div className={styles.grid}>
       <Link href="/" className={styles.card}>
-        <h2>
-          Home app<span>-&gt;</span> Homepage
-        </h2>
-        <p>Find in-depth information about Next.js features and API.</p>
+        <Button variant="destructive">Homepage</Button>
       </Link>
 
       <Link href="/about" className={styles.card}>
-        <h2>
-          Home app<span>-&gt;</span> About
-        </h2>
-        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+        <Button variant="destructive">About</Button>
       </Link>
 
       <A href="/docs" className={styles.card}>
-        <h2>
-          Docs app<span>-&gt;</span> Homepage docs
-        </h2>
-        <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+        <Button variant="destructive">Homepage DOCS</Button>
       </A>
     </div>
   );

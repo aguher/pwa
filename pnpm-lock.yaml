@@ -253,6 +253,9 @@ importers:
       react:
         specifier: ^17.0.2
         version: 17.0.2
+      shadcn:
+        specifier: workspace:*
+        version: link:../shadcn
       tailwindcss:
         specifier: ^3.3.2
         version: 3.3.2

@@ -7,6 +7,8 @@ const withPWA = require("@imbios/next-pwa")({
 module.exports = withPWA({
   reactStrictMode: true,
   transpilePackages: ["shadcn"],
+  register: true,
+  skipWaiting: true,
   async rewrites() {
     return [
       /**

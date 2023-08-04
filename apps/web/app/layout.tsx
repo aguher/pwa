@@ -2,7 +2,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { useEffect } from "react";
-import Navbar from "ui/components/Navbar";
+import { Navbar } from "shadcn";
 const inter = Inter({ subsets: ["latin"] });
 
 const APP_NAME = "next-pwa example";
